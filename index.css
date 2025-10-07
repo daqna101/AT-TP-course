@@ -1,0 +1,10 @@
+* {
+    color: red;
+    background-color: aqua;
+}
+
+
+main div h2,
+main div p {
+font-style: italic
+}
