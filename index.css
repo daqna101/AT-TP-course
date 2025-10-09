@@ -1,42 +1,39 @@
-*   h1{
-                color: black; 
-                text-align: center;
-                font-weight: bold;
-            }
-            h2{
-               color: black; 
-               text-align: center;
-               font-weight: bold;
-
-            }
-            div.topnav{
-                text-align: center;
-            }
-            nav ul li{
-                background-color: black;
-                color: white;
-                font-size: 14px;
-                text-align: center;
-                font-weight: bold;
-            }
-            img{
-                text-align: center;
-                width: 300px;;
-            }
-            .center {
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
-                width: 50%;
-            }
-            img > p {
-            
-                text-align: left;
-
-            }
-            footer p{
-                color: white;
-                font-weight: bold;
-                text-align: center;
-                background-color: black;
-            }
+* h1 {
+  color: black;
+  text-align: center;
+  font-weight: bold;
+}
+h2 {
+  color: black;
+  text-align: center;
+  font-weight: bold;
+}
+div.topnav {
+  text-align: center;
+}
+nav ul li {
+  background-color: black;
+  color: white;
+  font-size: 14px;
+  text-align: center;
+  font-weight: bold;
+}
+img {
+  text-align: center;
+  width: 300px;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+img > p {
+  text-align: left;
+}
+footer p {
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  background-color: black;
+}
