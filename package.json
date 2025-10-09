@@ -1,0 +1,26 @@
+{
+  "name": "at-tp-course",
+  "version": "1.0.0",
+  "description": "Automation Testing with Playwright & TypeScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "ts-node index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daqna101/AT-TP-course.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daqna101/AT-TP-course/issues"
+  },
+  "homepage": "https://github.com/daqna101/AT-TP-course#readme",
+  "devDependencies": {
+    "@types/node": "^24.7.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}
