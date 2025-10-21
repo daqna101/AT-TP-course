@@ -80,8 +80,8 @@ const mouse: { name: string; favFood: string; age: number } = {
 interface User {
   name: string;
   readonly email: string;
-  role: string;
-  job?: string;
+  role: "user" | "admin" | "superuser"; //string literals
+  job?: string; // optional params
   password?: string | number;
 }
 
@@ -91,5 +91,17 @@ const user: User = {
   role: "admin",
   job: "QA",
 };
+// optional param added later
 user.password = 324324;
 console.log(user);
+
+interface UserPermissions extends User {
+  permissions: string;
+}
+const newUser: UserPermissions = {
+  name: "Tom",
+  email: "tom@mail.com",
+  role: "admin",
+  job: "QA",
+  permissions: "edit",
+};
