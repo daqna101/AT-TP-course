@@ -25,10 +25,10 @@ let unsortNums: number [] = [20, 50, 10, 40, 100, 0];
 let sortedNums: number [] = unsortNums.sort((a, b)=> a - b);
 console.log(sortedNums);
 
-//slice to remove the second and third elements
-let unslicedArray: string [] = ['car', 'bike', 'bus', 'train','boat'];
-let slicedNums: string [] = unslicedArray.slice(1, 2);
-console.log(slicedNums);
+//splice to remove the second and third elements
+let unsplicedArray: string [] = ['car', 'bike', 'bus', 'train','boat'];
+let splicedArray= unsplicedArray.splice(1, 2);
+console.log(splicedArray);
 
 // function -> find the the largest num in the array
 function findLargest (numOne: number, numTwo: number, numThree: number): number | string {
