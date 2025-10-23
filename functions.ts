@@ -40,3 +40,12 @@ function subNums(numOne: number = 10, numTwo: number = 5) {
     console.log(numOne - numTwo);
 }
 // subNums(50, 30);
+
+
+// function with union types
+
+function printId(id: string | number) {
+  console.log(`id - ${id} is type of ${typeof id}`)
+}
+printId("#10");
+printId(10);
