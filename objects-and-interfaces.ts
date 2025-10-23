@@ -93,7 +93,7 @@ const user: User = {
 };
 // optional param added later
 user.password = 324324;
-console.log(user);
+//console.log(user);
 
 interface UserPermissions extends User {
   permissions: string;
@@ -105,3 +105,29 @@ const newUser: UserPermissions = {
   job: "QA",
   permissions: "edit",
 };
+
+// exercise
+
+interface Product {
+  name: string;
+  price: number;
+  getTotalPrice: (quantity: number) => number;
+}
+
+const smartphone: Product = {
+  name: 'Samsung',
+  price: 100,
+  getTotalPrice: function (quantity: number) {
+    return quantity * this.price;
+  }
+};
+
+function orderDetails(quantity: number, product: Product) {
+  console.log(`Order for: ${product.name}`);
+  console.log(`Product quantity: ${quantity}`);
+  console.log(`Product unit price: ${product.price}`)
+  console.log(`Total price of the product is: ${product.getTotalPrice(quantity)}$`)
+}
+
+orderDetails(5, smartphone);
+
