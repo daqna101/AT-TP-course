@@ -23,14 +23,57 @@ const shirt: Product = {
     category: "clothes"
 }; // add more products
 
-const products: Product[] = [apple, shirt]
+const newSmartphone: Product = {
+    name: "Samsung",
+    price: 1000,
+    category: "electronics"
+}
+
+const bannana: Product = {
+    name: "bannana",
+    price: 2,
+    category: "food"
+}
+const productsCustOne: Product[] = [apple, shirt]
 const customer: Customer = {
     name: 'Mladen Petrov',
     email: "mlade@email.com",
-    cart: products,
+    cart: productsCustOne,
 };
-// add second Customer
 
-// add function displayCart- owner, products
-// add function filterByCategory - receive products as massive and category as params and filter the products by given category
-// add function calculateTotalPrice - calculate total price of the products in the customer cart // receives customer data and all pproduct price
+const productsCustTwo: Product[] = [apple, shirt, newSmartphone, bannana]
+const customerTwo: Customer = {
+    name: "Dayana Alexandrova",
+    email: "dayana.a@email.com",
+    cart: productsCustTwo
+}
+
+function displayCart(customer: Customer): void {
+    console.log(customer.name, customer.cart);
+}
+
+function filterByCategory(products: Product[], category: Category) {
+    return products.filter(product => product.category === category);
+}
+
+function filteredProducts(customer: Customer, category: Category){
+    const filteredP = filterByCategory(customer.cart, category)
+    if (filteredP.length > 0) {
+        console.log(`${customer.name} has these ${category} items in the cart: ${filteredP.map(p=>p.name).join(", ")}`);
+    } else {
+        console.log(`${customer.name} doesn't have any ${category} products in their cart.`);
+    }
+}
+
+function calculateTotalPrice(customer: Customer): number {
+    return customer.cart.reduce((total, product) => total + product.price, 0);
+}
+filteredProducts(customerTwo, "food");
+filteredProducts(customerTwo, "electronics");
+
+displayCart(customerTwo);
+// displayCart(customerTwo);
+// console.log(`${customerTwo.name}'s total price: $${calculateTotalPrice(customerTwo)}`);
+// console.log(`${customer.name}'s total price: $${calculateTotalPrice(customer)}`);
+
+
