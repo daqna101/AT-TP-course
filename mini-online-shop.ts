@@ -12,6 +12,7 @@ interface Customer {
   cart: Product[];
 };
 
+// Products
 const apple: Product = {
     name: "Apple",
     price: 2,
@@ -21,7 +22,7 @@ const shirt: Product = {
     name: "T-Shirt",
     price: 30,
     category: "clothes"
-}; // add more products
+}; 
 
 const newSmartphone: Product = {
     name: "Samsung",
@@ -34,6 +35,8 @@ const bannana: Product = {
     price: 2,
     category: "food"
 }
+
+// customers
 const productsCustOne: Product[] = [apple, shirt]
 const customer: Customer = {
     name: 'Mladen Petrov',
@@ -48,6 +51,7 @@ const customerTwo: Customer = {
     cart: productsCustTwo
 }
 
+// functions 
 function displayCart(customer: Customer): void {
     console.log(customer.name, customer.cart);
 }
@@ -71,7 +75,7 @@ function calculateTotalPrice(customer: Customer): number {
 filteredProducts(customerTwo, "food");
 filteredProducts(customerTwo, "electronics");
 
-displayCart(customerTwo);
+// displayCart(customerTwo);
 // displayCart(customerTwo);
 // console.log(`${customerTwo.name}'s total price: $${calculateTotalPrice(customerTwo)}`);
 // console.log(`${customer.name}'s total price: $${calculateTotalPrice(customer)}`);
