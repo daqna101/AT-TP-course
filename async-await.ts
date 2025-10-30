@@ -55,22 +55,51 @@ interface Product {
   rating: Rating;
 }
 
-async function getData() {
-  // or getData: Promise <Product>, no console.log but return data
-  const response = await fetch("https://fakestoreapi.com/products/1");
-  const data: Product = await response.json();
-//   console.log(`Title: ${data.title}`);
-//   console.log(`Price: ${data.price}`);
-//   console.log(`Category: ${data.category}`);
+async function getData(): Promise <void> {
+  try {
+     const response = await fetch("https://fakestoreapi.com/products/1");
+     const data: Product = await response.json();
+     console.log(data);
+    } 
+   catch (error: unknown) {
+    console.error(error);
+  } 
+//   const response = await fetch("https://fakestoreapi.com/products/1");
+//   const data: Product = await response.json();
+//     console.log(`Title: ${data.title}`);
+//     console.log(`Price: ${data.price}`);
+//     console.log(`Category: ${data.category}`);
 }
 getData();
 
 // try catch finally
-try {
-    const jsonData = JSON.parse('{"valid: true}')
-    console.log(jsonData);
-} catch(err) {
-    console.error("Invalid JSON format!", err)
-} finally {
-    console.log("JSON parser ready")
+// try {
+//   const jsonData = JSON.parse('{"valid: true}');
+//   console.log(jsonData);
+// } catch (err) {
+//   console.error("Invalid JSON format!", err);
+// } finally {
+//   console.log("JSON parser ready");
+// }
+
+// try/catch/finally exercise
+
+function divideNumbers(numOne: number, numTwo: number) {
+  try {
+    if (numTwo === 0) {
+      throw new Error("Cannot divide by 0!");
+    } else {
+      const result: number = numOne / numTwo;
+      console.log(`Result is ${result}`);
+    }
+  } catch (err) {
+    console.error(err);
+  } finally {
+    console.log("Operation finished");
+  }
 }
+
+// divideNumbers(20, 2);
+// divideNumbers(20, 0);
+
+
